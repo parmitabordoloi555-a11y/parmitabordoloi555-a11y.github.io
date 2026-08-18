@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paromita Bordoloi | Mathematics</title>
+<meta name="description" content="Academic homepage of Paromita Bordoloi, a mathematician working in combinatorial commutative algebra.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+  --ink:#18212f;
+  --muted:#687385;
+  --blue:#315f91;
+  --blue-dark:#23466d;
+  --cream:#f7f5ef;
+  --paper:#fffdf8;
+  --line:#e4e2dc;
+  --shadow:0 18px 50px rgba(30,45,65,.08);
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--paper);
+  font-family:"DM Sans",Arial,sans-serif;line-height:1.72;font-size:16px;
+}
+a{color:inherit}
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(255,253,248,.88);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(228,226,220,.85);
+}
+.nav{
+  max-width:var(--max);margin:auto;padding:16px 28px;display:flex;
+  align-items:center;justify-content:space-between;
+}
+.logo{font-family:"Playfair Display",serif;font-size:21px;text-decoration:none}
+.navlinks{display:flex;gap:25px;font-size:14px}
+.navlinks a{text-decoration:none;color:#4f5968}
+.navlinks a:hover{color:var(--blue)}
+main{max-width:var(--max);margin:auto;padding:0 28px}
+.hero{
+  min-height:650px;display:grid;grid-template-columns:1.35fr .65fr;
+  gap:70px;align-items:center;padding:85px 0 95px;position:relative;
+}
+.hero:before{
+  content:"";position:absolute;right:-120px;top:50px;width:430px;height:430px;
+  border-radius:50%;background:var(--cream);z-index:-1;
+}
+.eyebrow{
+  color:var(--blue);font-size:13px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:18px;
+}
+h1{
+  font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(52px,7vw,82px);
+  line-height:1.02;letter-spacing:-2px;margin:0 0 18px;
+}
+.hero h2{
+  font-size:20px;font-weight:500;color:#4f5968;margin:0 0 26px;
+}
+.hero p{max-width:680px;color:#505a69;font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.button{
+  text-decoration:none;padding:11px 18px;border-radius:7px;font-size:14px;
+  font-weight:600;border:1px solid var(--blue);
+}
+.button.primary{background:var(--blue);color:white}
+.button.secondary{color:var(--blue);background:transparent}
+.button:hover{transform:translateY(-1px)}
+.photo-wrap{display:flex;justify-content:center}
+.photo{
+  width:285px;height:350px;background:#eeeae1;border-radius:145px 145px 18px 18px;
+  border:9px solid white;box-shadow:var(--shadow);display:flex;align-items:center;
+  justify-content:center;color:#858b92;text-align:center;font-size:13px;padding:30px;
+}
+.section{padding:80px 0;border-top:1px solid var(--line)}
+.section-grid{display:grid;grid-template-columns:230px 1fr;gap:70px}
+.section-label{
+  font-family:"Playfair Display",serif;font-size:28px;line-height:1.2;
+  color:var(--blue-dark)
+}
+.section-content{max-width:780px}
+.section-content p{color:#535d6c}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}
+.tag{
+  padding:7px 12px;border:1px solid #d9dfe6;border-radius:30px;
+  font-size:13px;color:var(--blue-dark);background:#fbfcfd
+}
+.research-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px
+}
+.card{
+  padding:23px;background:#fff;border:1px solid var(--line);border-radius:12px;
+  transition:.2s ease
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h3{margin:0 0 7px;font-size:17px}
+.card p{margin:0;font-size:14px}
+.pub{
+  padding:24px 0;border-bottom:1px solid var(--line)
+}
+.pub:last-child{border-bottom:0}
+.pub-title{font-family:"Playfair Display",serif;font-size:20px;line-height:1.35}
+.pub-authors{margin-top:6px;color:#596372;font-size:14px}
+.pub-links{margin-top:10px;font-size:13px}
+.pub-links a{color:var(--blue);text-decoration:none;margin-right:18px}
+.meta{color:var(--muted);font-size:14px}
+.contact-box{
+  background:var(--cream);padding:34px;border-radius:14px;display:flex;
+  justify-content:space-between;gap:30px;align-items:center
+}
+.contact-box h3{font-family:"Playfair Display",serif;font-size:25px;margin:0 0 7px}
+.socials{display:flex;gap:18px;flex-wrap:wrap}
+.socials a{color:var(--blue);font-size:14px;font-weight:600;text-decoration:none}
+footer{
+  max-width:var(--max);margin:auto;padding:30px 28px 45px;border-top:1px solid var(--line);
+  color:#7b8490;font-size:12px;display:flex;justify-content:space-between
+}
+@media(max-width:800px){
+  .nav{display:block}.navlinks{margin-top:10px;gap:16px;flex-wrap:wrap}
+  .hero{grid-template-columns:1fr;min-height:auto;padding:65px 0 75px;gap:45px}
+  .photo-wrap{justify-content:flex-start}
+  .section-grid{grid-template-columns:1fr;gap:18px}
+  .research-grid{grid-template-columns:1fr}
+  .contact-box{display:block}
+  .socials{margin-top:20px}
+}
+</style>
+</head>
+
+<body>
+<nav>
+  <div class="nav">
+    <a class="logo" href="#">Paromita Bordoloi</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">Mathematics · Commutative Algebra</div>
+    <h1>Paromita<br>Bordoloi</h1>
+    <h2>Ph.D. Scholar · Department of Mathematics · IIT Jammu</h2>
+    <p>
+      I am a mathematician working in <strong>combinatorial commutative algebra</strong>.
+      My research explores monomial ideals and their connections with combinatorics,
+      with particular interests in symbolic powers, associated primes, and homological methods.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="#research">Explore my research</a>
+      <a class="button secondary" href="cv.pdf">Curriculum vitae ↗</a>
+    </div>
+  </div>
+  <div class="photo-wrap">
+    <div class="photo">Your photograph<br><br>Replace this box with your photo.</div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-grid">
+    <div class="section-label">About me</div>
+    <div class="section-content">
+      <p>
+        I am currently a Ph.D. scholar in the Department of Mathematics at
+        <a href="https://www.iitjammu.ac.in/" target="_blank" rel="noopener">IIT Jammu</a>,
+        working under the supervision of Dr. Rajiv Kumar.
+      </p>
+      <p>
+        My research lies at the intersection of commutative algebra and combinatorics.
+        I am interested in understanding algebraic properties of monomial ideals
+        through the combinatorial structures underlying them.
+      </p>
+      <p>
+        I am also interested in broader questions involving homological methods
+        in commutative algebra and related areas of algebraic combinatorics.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="section-grid">
+    <div class="section-label">Research</div>
+    <div class="section-content">
+      <p>
+        My current research focuses on the following themes:
+      </p>
+      <div class="research-grid">
+        <div class="card">
+          <h3>Monomial ideals</h3>
+          <p>Structural and homological properties of monomial ideals and their combinatorial interpretations.</p>
+        </div>
+        <div class="card">
+          <h3>Symbolic powers</h3>
+          <p>Symbolic powers, ordinary powers, containments, and related algebraic properties.</p>
+        </div>
+        <div class="card">
+          <h3>Edge ideals</h3>
+          <p>Edge ideals, generalized edge ideals, weighted structures, and associated combinatorial questions.</p>
+        </div>
+        <div class="card">
+          <h3>Associated primes</h3>
+          <p>Associated primes, persistence phenomena, and their relationship with combinatorial structures.</p>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Combinatorial Commutative Algebra</span>
+        <span class="tag">Monomial Ideals</span>
+        <span class="tag">Edge Ideals</span>
+        <span class="tag">Symbolic Powers</span>
+        <span class="tag">Associated Primes</span>
+        <span class="tag">Homological Methods</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="section-grid">
+    <div class="section-label">Publications</div>
+    <div class="section-content">
+      <div class="pub">
+        <div class="pub-title">Support-2 monomial ideals that are Simis</div>
+        <div class="pub-authors">Paromita Bordoloi, Kanoy Kumar Das, and Rajiv Kumar</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/pdf/2504.07045" target="_blank" rel="noopener">arXiv ↗</a>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-title">More publications and preprints</div>
+        <div class="pub-authors">This section can be expanded as your work is published or submitted.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cv">
+  <div class="section-grid">
+    <div class="section-label">Curriculum vitae</div>
+    <div class="section-content">
+      <p>
+        For a complete overview of my education, research, publications,
+        talks, and academic activities, please see my CV.
+      </p>
+      <a class="button primary" href="cv.pdf">Download CV ↗</a>
+      <p class="meta">Place your CV PDF in this repository and name it <strong>cv.pdf</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-box">
+    <div>
+      <h3>Let's connect</h3>
+      <div class="meta">For research discussions, collaborations, or academic inquiries.</div>
+    </div>
+    <div class="socials">
+      <a href="mailto:YOUR-EMAIL@example.com">Email</a>
+      <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 Paromita Bordoloi</span>
+  <span>IIT Jammu · Mathematics</span>
+</footer>
+</body>
+</html>
